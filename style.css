@@ -1,0 +1,66 @@
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e6aeea, #fad0c4, #fad0c4, #f7797d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .container {
+    text-align: center;
+  }
+  
+  .haiku {
+    font-size: 1.5em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+  }
+  
+  .cats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .cat {
+    width: 50px;
+    animation: float 2s infinite alternate;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .cat:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .cat:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .cat:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+  }
+  /* Style de l'image */
+#chatImage {
+    width: 200px;
+    cursor: pointer;
+}
